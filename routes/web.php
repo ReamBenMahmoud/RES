@@ -2,8 +2,8 @@
 
 
 
-Route::get('/meals/resturant','MealController@index');
+Route::get('/meals','MealController@index');
 
-
+Route::get('/meals/store','MealController@store');
 
 ?>

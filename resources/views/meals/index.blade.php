@@ -32,7 +32,7 @@
 
 
     <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="{{assset('css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/aos.css')}}">
 
 
     <link rel="stylesheet" href="css/ionicons.min.css">
@@ -137,7 +137,9 @@
 					              <div class="menu-img img" style="background-image: url(images/breakfast-1.jpg);"></div>
 					              <div class="text d-flex align-items-center">
 													<div>
+
 						              	<div class="d-flex">
+
 							                <div class="one-half">
 							                  <h3>لحم البقر المشوي مع البطاطا
 												</h3>
@@ -165,6 +167,7 @@
 					              </div>
 					            </div>
 					        	</div>
+
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
 					              <div class="menu-img img" style="background-image: url(images/breakfast-2.jpg);"></div>
@@ -460,7 +463,7 @@
 					              </div>
 					            </div>
 					        	</div>
-
+@foreach ($meals as $meal )
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
 					              <div class="menu-img img order-md-last" style="background-image: url(images/lunch-3.jpg);"></div>
@@ -468,7 +471,7 @@
 													<div>
 						              	<div class="d-flex">
 							                <div class="one-half">
-							                  <h3>لحم البقر المشوي مع البطاطا</h3>
+							                  <h3> {{$meal->name}}</h3>
 							                </div>
 							                <div class="one-forth">
 							                  <span class="price">25د.ل</span>
@@ -492,6 +495,8 @@
 					              </div>
 					            </div>
 					        	</div>
+@endforeach
+
 					        	<div class="col-md-12 col-lg-6 d-flex align-self-stretch">
 					        		<div class="menus d-sm-flex ftco-animate align-items-stretch">
 					              <div class="menu-img img order-md-last" style="background-image: url(images/lunch-4.jpg);"></div>
@@ -1323,7 +1328,7 @@
 
   
   <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="{{asset('{{asset('js/jquery.animateNumber.min.js')}}')}}"></script>
+  <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
 
 
   <script src="js/bootstrap-datepicker.js"></script>
