@@ -10,7 +10,9 @@ class MealController extends Controller
 {
     public function index(){
 
-        return view ("meals.index", ["meals"=> meal::all()]);
+        return view ("meals.index", [
+            "meals"=> meal::all()
+            ] );
 
     }
     public function store(){
