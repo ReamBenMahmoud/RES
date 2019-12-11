@@ -20,6 +20,16 @@ class MealController extends Controller
         $meal->price=10;
         $meal->details="فخد دجاج و صوص باربكيو";
         $meal->save();
+ 
+        
+        $meal = new Meal;
+        $meal->name=" لحم مشوي";
+        $meal->price=15;
+        $meal->details="فخد دجاج و صوص باربكيو";
+        $meal->save();
 
+        
     }
+
+
 }
