@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Meal;
+use App\Category;
 
 
 class MealController extends Controller
 {
     public function index(){
 
-        return view ("meals.index", [
-            "meals"=> meal::all()
-            ] );
+        return view("meals.index", ["meals"=> Meal::all(), 'categories' => Category::all()] );
 
     }
     public function store(){
