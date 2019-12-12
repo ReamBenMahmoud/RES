@@ -8,4 +8,8 @@ Route::get('/categories','CategoryController@store');
 
 Route::get('/meals/store','MealController@store');
 
+Route::get('/contact','PageController@show');
+Route::get('/about','PageController@show2');
+
+
 ?>
