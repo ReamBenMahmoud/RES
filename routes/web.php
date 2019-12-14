@@ -19,6 +19,13 @@ Route::get('/contact','PageController@show');
 Route::get('/about','PageController@show2');
 
 
+// Home page controller
+Route::get('/home1','Home1Controller@show3');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 ?>
+ 
