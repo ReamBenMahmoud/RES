@@ -10,8 +10,14 @@ class CategoryController extends Controller
     public function store()
     {
         $cat= new Category;
-        $cat -> name = "مشاوي";
+        $cat -> name = request('name');
         $cat -> save();   
+        return redirect('/meals');
+    }
+    public function create(){
+
+        return view('create');
+        
     }
 
 }
