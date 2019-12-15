@@ -66,7 +66,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav" dir="rtl">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">الرئيسية</a></li>
+	        	<li class="nav-item active"><a href="/home1" class="nav-link">الرئيسية</a></li>
             <li class="nav-item"><a href="/meals" class="nav-link"> القائمة</a></li>
             <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
