@@ -35,70 +35,8 @@
 
  
   </head>
-  <body>
-    
-	  
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light text-right " id="ftco-navbar" dir="rtl">
-	    <div class="container">
-	      <a class="navbar-brand " href="index.html">Order System</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> القائمة
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav" >
-	        <ul class="navbar-nav ">
-	        	<li class="nav-item active"><a href="/home1" class="nav-link">الرئيسية</a></li>
-            <li class="nav-item"><a href="/meals" class="nav-link">القائمة</a></li>
-            <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
-	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
-            <li class="nav-item cta"><a href="reservation.html" class="nav-link">حجز طاولة</a></li>
-          </ul>
-          <ul class="navbar-nav mr-auto">
-            <li id="signup"   class=" nav-item " ><a href="/register" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 nav-link" >Sign Up</a></li>
-            <li   class="nav-item "  ><a href="/login" class="mr-4 btn btn-primary p-3 px-xl-4 py-xl-3 nav-link">Sign In</a></li>
-          </ul>
-              
-              <div id="modal-wrapper" class="modal">
-              
-              <form class="modal-content animate" action="">
-              
-              <div class="imgcontainer">
-              <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-              <h1 style="text-align:center">تسجيل الدخول</h1>
-              </div>
-              
-              
-               
-              <div class="container">
-              <input type="text" placeholder="Enter Username" name="uname">
-              <input type="password" placeholder="Enter Password" name="psw">
-              <button  type="submit">Login</button>
-           
-              </div>
-              
-              </form>
-              
-              </div>
-              <script>
-                      // If user clicks anywhere outside of the modal, Modal will close
-                      
-                      var modal = document.getElementById('modal-wrapper');
-                      window.onclick = function(event) {
-                      if (event.target == modal) {
-                      modal.style.display = "none";
-                      }
-                      }
-                      </script>
-	   
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-
-
-
-    @yield ('content')
+  @yield ('content')
 
 
 

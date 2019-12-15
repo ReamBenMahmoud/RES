@@ -20,10 +20,13 @@ class MealController extends Controller
     public function store(){
 
         $meal = new Meal;
+
         $meal->name= request('name');
         $meal->price=request('price');
         $meal->details=request('details');
-        // $meal->category_id=1;
+        $image_path = request()->file('image')->store('public');
+        $meal->image = str_replace('public/','',$image_path);
+
         $category_id = request('category');
         Category::find($category_id)->meal()->save($meal);
       
