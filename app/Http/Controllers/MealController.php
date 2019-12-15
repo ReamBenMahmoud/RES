@@ -11,25 +11,33 @@ class MealController extends Controller
 {
     public function index(){
 
-        return view("meals.index", ["meals"=> Meal::all(), 'categories' => Category::all()] );
+        return view('meals.index', [
+            'meals' => Meal::all(),
+            'categories' => Category::all()
+        ]);
 
     }
     public function store(){
 
         $meal = new Meal;
-        $meal->name=" دجاج مشوي";
-        $meal->price=10;
-        $meal->details="فخد دجاج و صوص باربكيو";
-        $meal->save();
- 
+        $meal->name= request('name');
+        $meal->price=request('price');
+        $meal->details=request('details');
+        // $meal->category_id=1;
+        $category_id = request('category');
+        Category::find($category_id)->meal()->save($meal);
+      
+        return redirect('/meals');
         
-        $meal = new Meal;
-        $meal->name=" لحم مشوي";
-        $meal->price=15;
-        $meal->details="فخد دجاج و صوص باربكيو";
-        $meal->save();
+      
+    }
 
-        
+    public function create()
+    {
+        return view('meals.create', [
+           
+            'categories' => Category::all()
+        ]);
     }
 
 
