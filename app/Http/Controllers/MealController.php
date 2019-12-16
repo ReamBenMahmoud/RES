@@ -11,9 +11,9 @@ class MealController extends Controller
 {
     public function index(){
 
+
         return view('meals.index', [
-            'meals' => Meal::all(),
-            'categories' => Category::all()
+            'categories' => Category::with('meals')->get()
         ]);
 
     }
@@ -25,11 +25,9 @@ class MealController extends Controller
         $meal->details=request('details');
         // $meal->category_id=1;
         $category_id = request('category');
-        Category::find($category_id)->meal()->save($meal);
+        Category::find($category_id)->meals()->save($meal);
       
-        return redirect('/meals');
-        
-      
+        return redirect('/meals'); 
     }
 
     public function create()
@@ -40,5 +38,23 @@ class MealController extends Controller
         ]);
     }
 
-
+    public function edit($id)
+    {
+        return view('meals.edit',  [
+            'categories' => Category::all(),
+            'meal' => Meal::find($id)
+        ]);
+    } 
+    
+    public function update($id)
+    {
+        $meal = Meal::find($id);
+        $meal->name= request('name');
+        $meal->price=request('price');
+        $meal->details=request('details');
+        $category_id = request('category');
+        Category::find($category_id)->meals()->save($meal);
+      
+        return redirect('/meals'); 
+}
 }

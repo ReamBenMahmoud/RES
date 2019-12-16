@@ -34,8 +34,8 @@
 
                             @foreach ( $categories as $category )
 
-                            <a class="nav-link ftco-animate" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
-                                role="tab" aria-controls="v-pills-1" aria-selected="true"><b>{{$category->name}}</b></a>
+                            <a class="nav-link ftco-animate" id="v-pills-{{ $category->id }}-tab" data-toggle="pill" href="#v-pills-{{ $category->id }}" {{ $category->name }}
+                                role="tab" aria-controls="v-pills-{{ $category->id }}" aria-selected="true"><b>{{$category->name}}</b></a>
 
                             @endforeach
 
@@ -50,10 +50,11 @@
 
                         <div class="tab-content" id="v-pills-tabContent">
 
-                            <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
+                            @foreach($categories as $category)
+                        <div class="tab-pane fade show" id="v-pills-{{ $category->id }}" role="tabpanel"
                                 aria-labelledby="day-1-tab">
                                 <div class="row no-gutters d-flex align-items-stretch">
-                                    @foreach ($meals as $meal )
+                                    @foreach ($category->meals as $meal )
                                     <div class="col-md-12 col-lg-6 d-flex align-self-stretch">
                                         <div class="menus d-sm-flex ftco-animate align-items-stretch">
                                             <div class="menu-img img"
@@ -82,6 +83,7 @@
                                                             <div class="input-group-button">
                                                                 <span class="input-number-increment">+</span>
                                                             </div>
+                                                            <div> <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info">Edit Meal</a></div>
                                                         </div>
 
                                                     </form>
@@ -96,6 +98,7 @@
                                     @endforeach
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
 

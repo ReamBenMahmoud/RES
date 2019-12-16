@@ -4,17 +4,14 @@
 // meals controller
 Route::get('/meals','MealController@index');
 Route::get('/meals/store','MealController@store');
-
-
-<<<<<<< HEAD
-Route::get('/meals/store','MealController@store');
 Route::get('/meals/create','MealController@create');
+Route::get('/meals/{id}/edit','MealController@edit');
+Route::patch('/meals/{id}','MealController@update');
+Route::patch('/meals/{id}','MealController@update');
 
-=======
 // category controller
 Route::get('/categories/create','CategoryController@create');
 Route::post('/categories','CategoryController@store');
->>>>>>> 4023a613012c43023926cada380ec262ac0183d5
 
 
 // contact page controller

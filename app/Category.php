@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    public function Meal()
+    public function meals()
     {
         return $this->hasMany('App\Meal');
     }
