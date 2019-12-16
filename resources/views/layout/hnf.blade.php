@@ -48,36 +48,44 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav" >
 	        <ul class="navbar-nav ">
-	        	<li class="nav-item active"><a href="/home1" class="nav-link">الرئيسية</a></li>
+	        	<li class="nav-item active"><a href="/" class="nav-link">الرئيسية</a></li>
             <li class="nav-item"><a href="/meals" class="nav-link">القائمة</a></li>
             <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
             <li class="nav-item cta"><a href="reservation.html" class="nav-link">حجز طاولة</a></li>
           </ul>
-          <ul class="navbar-nav mr-auto">
-            <li id="signup"   class=" nav-item " ><a href="/register" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 nav-link" >Sign Up</a></li>
-            <li   class="nav-item "  ><a href="/login" class="mr-4 btn btn-primary p-3 px-xl-4 py-xl-3 nav-link">Sign In</a></li>
-          </ul>
-              
-              <div id="modal-wrapper" class="modal">
-              
-              <form class="modal-content animate" action="">
-              
-              <div class="imgcontainer">
-              <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-              <h1 style="text-align:center">تسجيل الدخول</h1>
+          
+               <ul class="navbar-nav">
+          <!-- Authentication Links -->
+          @guest
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('login') }}">{{ __('تسجيل الدخول') }}</a>
+          </li>
+          @if (Route::has('register'))
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('register') }}">{{ __('التسجيل') }}</a>
+              </li>
+          @endif
+      @else
+          <li class="nav-item dropdown">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-primary p-3 px-xl-4 py-xl-3 nav-link" style="margin:0px 80px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
+                  {{ Auth::user()->name }} <span class="caret" ></span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                      {{ __('تسجيل الخروج') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
               </div>
-              
-              
-               
-              <div class="container">
-              <input type="text" placeholder="Enter Username" name="uname">
-              <input type="password" placeholder="Enter Password" name="psw">
-              <button  type="submit">Login</button>
-           
-              </div>
-              
-              </form>
+          </li>
+      @endguest
+        </ul>
               
               </div>
               <script>

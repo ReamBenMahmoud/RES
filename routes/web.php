@@ -15,15 +15,15 @@ Route::post('/categories','CategoryController@store') ;
 
 
 // contact page controller
-Route::get('/contact','PageController@show');
+Route::get('/contact','PageController@showContact');
 
 
 // about page controller
-Route::get('/about','PageController@show2');
+Route::get('/about','PageController@showAbout');
 
 
 // Home page controller
-Route::get('/home1','Home1Controller@show3');
+Route::get('/','PageController@showHome');
 
 
 Auth::routes();
