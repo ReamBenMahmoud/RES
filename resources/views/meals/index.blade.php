@@ -109,7 +109,7 @@
 
     <div class="buttondone">
 
-        <button type="button" class="btn btn-success btn-lg">موافق</button>
+        <a  class="btn btn-success btn-lg" href="/checkout">موافق</a>
 
     </div>
 

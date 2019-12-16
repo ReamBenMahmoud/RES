@@ -18,4 +18,21 @@ class PageController extends Controller
     public function showHome(){
         return view('home1');
     }
+
+    public function showReservation(){
+
+        return view('reservation');
+    }
+
+    public  function showCheckout(){
+        return view('checkout');
+
+    }
+    
+        # code...
+    
+
+    
+        # code...
+    
 }
