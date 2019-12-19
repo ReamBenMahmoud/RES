@@ -35,10 +35,18 @@ Route::get('/about','PageController@showAbout');
 // Home page controller
 Route::get('/','PageController@showHome');
 
+// Reservation Page controller  
+Route::get('/reservation','PageController@showReservation');
+
+// chechout page controller
+Route::get('/checkout','PageController@showCheckout');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function() {
+    return redirect('/');
+})->name('home');
 
 ?>
  

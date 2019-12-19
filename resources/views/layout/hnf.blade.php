@@ -52,12 +52,13 @@
             <li class="nav-item"><a href="/meals" class="nav-link">القائمة</a></li>
             <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
-            <li class="nav-item cta"><a href="reservation.html" class="nav-link">حجز طاولة</a></li>
+            <li class="nav-item cta"><a href="/reservation" class="nav-link">حجز طاولة</a></li>
           </ul>
           
                <ul class="navbar-nav">
           <!-- Authentication Links -->
           @guest
+           
           <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('تسجيل الدخول') }}</a>
           </li>
@@ -84,6 +85,7 @@
                   </form>
               </div>
           </li>
+          
       @endguest
         </ul>
               
