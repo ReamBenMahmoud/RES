@@ -1,7 +1,8 @@
+
 <div class="container">
     <h2>Add New Meal</h2>
 
-    <form action="{{ url('/meals/store') }}" method="get">
+    <form action="{{ url('/meals/store') }}" method="post" enctype="multipart/form-data">
         @csrf
 
         <div class="row form-group">
@@ -39,7 +40,11 @@
                 </select>
             </div>
         </div>
-
+  <div class="col-10">
+  صورة
+                <input type="file" name="image" class="form-control">
+            </div>
+        </div>
         <div class="row form-group">
             <input type="submit" value="Add" class="btn btn-primary offset-2">
         </div>

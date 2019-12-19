@@ -39,6 +39,10 @@
                     @endforeach
                 </select>
             </div>
+            <div class="col-10">
+                صورة
+                              <input type="file" name="image" class="form-control">
+                          </div>
         </div>
 
         <div class="row form-group">

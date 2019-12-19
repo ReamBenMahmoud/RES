@@ -58,7 +58,7 @@
                                     <div class="col-md-12 col-lg-6 d-flex align-self-stretch">
                                         <div class="menus d-sm-flex ftco-animate align-items-stretch">
                                             <div class="menu-img img"
-                                                style="background-image: url(images/breakfast-1.jpg);"></div>
+                                                style="background-image: url({{asset('storage/'.$meal->image)}});"></div>
                                             <div class="text d-flex align-items-center">
                                                 <div>
                                                     <div class="d-flex">
@@ -72,7 +72,7 @@
                                                     </div>
                                                     <p>{{$meal->details}}
                                                     </p> <br>
-
+                                                        @auth
                                                     <form class="float-right">
                                                         <div class="input-group input-number-group">
                                                             <div class="input-group-button">
@@ -84,9 +84,16 @@
                                                                 <span class="input-number-increment">+</span>
                                                             </div>
                                                             <div> <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info">Edit Meal</a></div>
+                                                            <form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
+                                                                @csrf
+                                                                @method('DELETE')
+                                    
+                                                                <input type="submit" value="Delete" class="btn btn-danger">
+                                                            </form>
                                                         </div>
 
                                                     </form>
+                                                    @endauth
 
                                                 </div>
 
@@ -105,7 +112,9 @@
     </section>
 
     <!-- button Done    -->
-
+    
+@auth
+ 
 
     <div class="buttondone">
 
@@ -113,7 +122,7 @@
 
     </div>
 
-
+@endauth
     <!--  End button done   -->
 
 
