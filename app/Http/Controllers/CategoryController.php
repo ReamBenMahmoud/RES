@@ -9,6 +9,10 @@ class CategoryController extends Controller
    
     public function store()
     {
+        request()->validate([
+            'name' => 'required|unique:categories'
+        ]);
+
         $cat= new Category;
         $cat -> name = request('name');
         $cat -> save();   

@@ -18,6 +18,13 @@ class MealController extends Controller
 
     }
     public function store(){
+        request()->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'details'=>'required',
+            'image' => 'required|image',
+            'category' => 'required|exists:categories,id'
+        ]);
 
         $meal = new Meal;
 
