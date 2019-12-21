@@ -31,7 +31,7 @@
             <label id="fonts" class="col-2.5 col-form-label">التفاصيل</label>
 
             <div class="col-10">
-                <textarea name="details" class="form-control"></textarea>
+                <textarea id="fonts" name="details" class="form-control"></textarea>
             </div>
         </div>
 
@@ -46,13 +46,15 @@
                 </select>
             </div>
         </div>
-  <div id="fonts" class="col-10">
-  صورة
-                <input type="file" name="image" class="form-control">
-            </div>
+
+        <div id="fonts" class="row form-group">
+            <label id="fonts" class="col-2.5 col-form-label ml-4">الصور</label>
+            <input type="file" name="image" class="form-control col-9 ml-3">
+        </div>
+
         </div>
         <div class="row form-group">
-            <input type="submit" value="Add" class="btn btn-success offset-2">
+            <input id="fonts" type="submit" value="موافق" class="btn btn-success offset-2">
         </div>
     </form>
 </div>
