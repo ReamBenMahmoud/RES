@@ -1,3 +1,7 @@
+@extends('layout.nf')
+
+@section('content')
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <style> 
@@ -5,8 +9,8 @@
   font-family: 'Tajawal', sans-serif;
 }
 </style> 
-<div class="container">
-    <h2 id="fonts" class="ml-3">إضافة وجبة جديدة</h2>
+<div class="container mr-5 mt-5">
+    <h2 id="fonts" class="ml-5">إضافة وجبة جديدة</h2>
 
     <form class="form-group col-md-4 col-form-label text-md-right" action="{{ url('/meals/store') }}" method="post" enctype="multipart/form-data">
         @csrf
@@ -53,8 +57,9 @@
         </div>
 
         </div>
-        <div class="row form-group">
+        <div class="row form-group"> 
             <input id="fonts" type="submit" value="موافق" class="btn btn-success offset-2">
         </div>
     </form>
 </div>
+@endsection
