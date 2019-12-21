@@ -83,7 +83,8 @@
                                                             <div class="input-group-button">
                                                                 <span class="input-number-increment">+</span>
                                                             </div>
-                                                            <div> <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info">Edit Meal</a></div>
+                                                            <br><br>
+                                                            <div> <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info mr-3">Edit Meal</a></div>
                                                             <form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
                                                                 @csrf
                                                                 @method('DELETE')

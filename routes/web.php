@@ -2,12 +2,12 @@
 
 
 // meals controller
-Route::get('/meals','MealController@index');
-Route::get('/meals/store','MealController@store');
-Route::get('/meals/create','MealController@create');
-Route::get('/meals/{id}/edit','MealController@edit');
-Route::patch('/meals/{id}','MealController@update');
-Route::delete('/products/{id}','ProductController@destroy');
+Route::get('/meals','MealController@index')->middleware('auth');;
+Route::get('/meals/store','MealController@store')->middleware('auth');;
+Route::get('/meals/create','MealController@create')->middleware('auth');;
+Route::get('/meals/{id}/edit','MealController@edit')->middleware('auth');;
+Route::patch('/meals/{id}','MealController@update')->middleware('auth');;
+Route::delete('/products/{id}','ProductController@destroy')->middleware('auth');;
 
 // category controller
 Route::get('/categories/create','CategoryController@create');
