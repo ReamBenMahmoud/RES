@@ -22,11 +22,11 @@
  <form action="{{url('/categories')}}" method="POST">
  @csrf
 
-  <div class="form-group row col-md-6">
+  <div class="form-group row col-md-12">
      
-        <label for="category" class="col-md-2 col-form-label text-md-right">إسم الصنف </label>
-        <input id="fonts" type="text" class="form-control col-2 col-md-5 " id="category" aria-describedby="emailHelp" placeholder="إسم الصنف">
-        <button id="fonts" type="submit" class="btn btn-success col-ml-1 ml-4" >موافق</button>
+        <label for="category" class="col-md-2 col-form-label text-md-right mr-5">إسم الصنف </label>
+        <input id="fonts" type="text" class="form-control col-2 col-md-5 mr-5 " id="category" aria-describedby="emailHelp" placeholder="إسم الصنف">
+        <button id="fonts" type="submit" class="btn btn-success col-md-2 ml-5" >موافق</button>
 
   </div>
  

@@ -1,7 +1,7 @@
 @extends('layout.f')
 
 @section('content')
- <div style="padding: 70px 0 "></div>  
+ <div style="padding: 70px 0px "></div>  
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
