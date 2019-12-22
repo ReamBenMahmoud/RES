@@ -60,7 +60,27 @@
           @guest
            
           <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('تسجيل الدخول') }}</a>
+              {{-- <a class="nav-item" >{{ __('تسجيل الدخول') }}</a> --}}
+
+{{-- href="{{ route('login') }}" --}}
+
+
+
+ <div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+    تسجيل الدخول
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="{{ route('login') }}">{{ __('زبون') }}</a>
+    <a class="dropdown-item" href="{{ route('login') }}">{{ __('ادمن') }}  </a>
+     
+  </div>
+</div>
+
+
+
+
           </li>
           @if (Route::has('register'))
               <li class="nav-item">
