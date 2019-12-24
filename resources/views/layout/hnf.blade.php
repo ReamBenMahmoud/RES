@@ -73,7 +73,7 @@
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="{{ route('login') }}">{{ __('زبون') }}</a>
-    <a class="dropdown-item" href="{{ route('login') }}">{{ __('ادمن') }}  </a>
+    <a class="dropdown-item" href="{{ url('loginAdmin') }}">{{ __('ادمن') }}  </a>
      
   </div>
 </div>
@@ -89,7 +89,7 @@
           @endif
       @else
           <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-primary p-3 px-xl-4 py-xl-3 nav-link" style="margin:0px 80px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
+              <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-primary p-3 px-xl-4 py-xl-3 nav-link" style="margin:0px 55px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" v-pre >
                   {{ Auth::user()->name }} <span class="caret" ></span>
               </a>
 
