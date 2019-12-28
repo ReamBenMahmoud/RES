@@ -72,7 +72,7 @@
 	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
 	          <li class="nav-item cta"><a href="/reservation" class="nav-link">حجز طاولة</a></li>
          
-          @auth
+          @auth('web_admin')
               
  	          <li class="nav-item cta"><a href="\categories\create" class="nav-link" style="margin:0px 10px";> اضافة صنف</a></li>
 	          <li class="nav-item cta " ><a href="\meals\create" class="nav-link" style="margin:0px 5px";> اضافة وجبة </a></li>

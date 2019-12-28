@@ -31,13 +31,12 @@ class PageController extends Controller
 
     public function loginAdmin(){
 
-        return view('admin.loginAdmin');
+      return view('admin.loginAdmin');
 
-        // return redirect()->route('home1');
+      return redirect()->route('/');
     }
 
     public function login(){
-
          request()->validate([
 
                  "email"=>'required|email',
@@ -45,9 +44,11 @@ class PageController extends Controller
 
 ]);
 
+
           $creds = request()->only('email','password');
           if (auth('web_admin')->attempt($creds)){
-              return redirect()->intended();
+              return redirect('/');
+              
           } 
           return redirect()->back();
     }
