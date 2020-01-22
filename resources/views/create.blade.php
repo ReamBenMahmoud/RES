@@ -11,11 +11,11 @@
   font-family:'Tajawal', sans-serif;
 }
 </style>
-<div style="padding: 90px 0"></div>  
-<div class="container">
+<div style="padding: 50px 0"></div>  
+<div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card"> 
+            <div class="card mb-5 "> 
 <div style="padding:60px">
 <div id="fonts" class="mt-5"
 
