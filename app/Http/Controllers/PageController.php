@@ -28,11 +28,30 @@ class PageController extends Controller
         return view('checkout');
 
     }
-    
-        # code...
-    
 
+    public function loginAdmin(){
+
+      return view('admin.loginAdmin');
+
+      return redirect()->route('/');
+    }
+
+    public function login(){
+         request()->validate([
+
+                 "email"=>'required|email',
+                 "password"=>'required'
+
+]);
+
+
+          $creds = request()->only('email','password');
+          if (auth('web_admin')->attempt($creds)){
+              return redirect('/');
+              
+          } 
+          return redirect()->back();
+    }
     
-        # code...
-    
+         
 }

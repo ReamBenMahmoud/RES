@@ -58,7 +58,7 @@
                <ul class="navbar-nav">
           <!-- Authentication Links -->
           
-          @guest
+          @guest('web_admin')
            
           <li class="nav-item">
               {{-- <a class="nav-item" >{{ __('تسجيل الدخول') }}</a> --}}
@@ -91,7 +91,7 @@
       @else
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-primary p-3 px-xl-4 py-xl-3 nav-link" style="margin:0px 55px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" v-pre >
-                  {{ Auth::user()->name }} <span class="caret" ></span>
+                  {{ Auth::user('web_admin')->name }} <span class="caret" ></span>
               </a>
 
 
